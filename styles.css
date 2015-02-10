@@ -5,6 +5,14 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url(img/edm-lasers.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
