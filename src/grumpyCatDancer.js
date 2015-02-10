@@ -3,7 +3,7 @@ var GrumpyCatDancer = function(top, left) {
   this.$node.addClass('grumpyCat');
   this._size = 1;
   this._growing = true;
-
+  this._id = this.grumpyCount++;
 };
 
 GrumpyCatDancer.prototype = Object.create(CatDancer.prototype);
@@ -26,4 +26,6 @@ GrumpyCatDancer.prototype.resize = function() {
 
   return {transform: 'scale('+this._size+', '+this._size+')'};
 };
+
+GrumpyCatDancer.prototype.grumpyCount = 0;
 

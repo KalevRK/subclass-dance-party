@@ -3,6 +3,7 @@ var CatDancer = function(top, left){
   this._theta = 0;
   Dancer.call(this, top + this._radius, left, 50);
   this.$node.addClass('cat');
+  this._id = this.catCount++;
 };
 
 CatDancer.prototype = Object.create(Dancer.prototype);
@@ -16,3 +17,5 @@ CatDancer.prototype.step = function() {
   this._top += this._radius * Math.sin(this._theta);
   this.setPosition(this._top, this._left);
 };
+
+CatDancer.prototype.catCount = 0;
