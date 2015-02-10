@@ -20,6 +20,11 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+#dancefloor {
+  height: 90%;
+  width: 90%;
+  margin: 0 auto;
+}
 .dancer{
   border:10px solid red;
   border-radius:10px;
