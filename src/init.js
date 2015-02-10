@@ -21,9 +21,10 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
+    var $danceFloor = $("#dancefloor"); // cache the dance floor
 
     var dancer = new dancerMakerFunction(
-      $("#dancefloor").height() * Math.random(),
+      $danceFloor.height() * Math.random() + parseFloat($danceFloor.css("margin-top")),
       $("#dancefloor").width() * Math.random(),
       Math.random() * 1000
     );

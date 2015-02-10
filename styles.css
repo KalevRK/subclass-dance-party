@@ -29,9 +29,10 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 #dancefloor {
-  height: 90%;
-  width: 90%;
+  height: 30%;
+  width: 80%;
   margin: 0 auto;
+  margin-top: 375px;
 }
 
 .dancer{
@@ -41,8 +42,8 @@ body, a:link, a:visited, a:active{
 }
 
 .blinky {
-  height: 10px;
-  width: 10px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   background-color: red;
 }
