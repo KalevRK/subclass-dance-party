@@ -1,5 +1,5 @@
-var GrumpyCatDancer = function(top, left, timeBetweenSteps) {
-  CatDancer.call(this, top, left, timeBetweenSteps);
+var GrumpyCatDancer = function(top, left) {
+  CatDancer.call(this, top, left);
 };
 
 GrumpyCatDancer.prototype = Object.create(CatDancer.prototype);
