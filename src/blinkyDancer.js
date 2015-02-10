@@ -20,13 +20,13 @@
 
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  this._oldStep = this.step; // function object
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  this._oldStep();
+
+  Dancer.prototype.step.call(this);
   this.$node.toggle();
 };
