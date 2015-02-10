@@ -1,7 +1,7 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('blinky');
-  this._id = this.blinkyCount++;
+  this._id = BlinkyDancer.prototype.blinkyCount++;
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -16,5 +16,7 @@ BlinkyDancer.prototype.step = function() {
 BlinkyDancer.prototype.blinkyCount = 0;
 
 BlinkyDancer.prototype.lineUp = function() {
-  console.log("I'm a blinky dancer");
+  this._top = 100;
+  this._left = 100 + this._id * 50;
+  this.setPosition(this._top, this._left);
 };
