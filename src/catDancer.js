@@ -19,3 +19,7 @@ CatDancer.prototype.step = function() {
 };
 
 CatDancer.prototype.catCount = 0;
+
+CatDancer.prototype.lineUp = function() {
+  console.log("I'm a cat dancer");
+};

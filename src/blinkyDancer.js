@@ -14,3 +14,7 @@ BlinkyDancer.prototype.step = function() {
 };
 
 BlinkyDancer.prototype.blinkyCount = 0;
+
+BlinkyDancer.prototype.lineUp = function() {
+  console.log("I'm a blinky dancer");
+};

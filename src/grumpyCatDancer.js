@@ -29,3 +29,6 @@ GrumpyCatDancer.prototype.resize = function() {
 
 GrumpyCatDancer.prototype.grumpyCount = 0;
 
+GrumpyCatDancer.prototype.lineUp = function() {
+  console.log("I'm a grumpy cat dancer");
+};
