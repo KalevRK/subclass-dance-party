@@ -2,6 +2,7 @@ var CatDancer = function(top, left){
   this._radius = 5;
   this._theta = 0;
   Dancer.call(this, top + this._radius, left, 50);
+  this.$node.addClass('cat');
 };
 
 CatDancer.prototype = Object.create(Dancer.prototype);

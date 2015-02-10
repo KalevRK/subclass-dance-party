@@ -1,6 +1,7 @@
 var GrumpyCatDancer = function(top, left) {
   CatDancer.call(this, top, left);
-  this._size = 10;
+  this.$node.addClass('grumpyCat');
+  this._size = 1;
   this._growing = true;
 
 };
@@ -16,13 +17,13 @@ GrumpyCatDancer.prototype.step = function() {
 GrumpyCatDancer.prototype.resize = function() {
 
   // growing phase
-  this._growing && this._size++;
-  (this._size === 30) && (this._growing = false);
+  this._growing && (this._size += 0.05);
+  (this._size >= 2) && (this._growing = false);
 
   // shrinking phase
-  !this._growing && this._size--;
-  (this._size === 10) && (this._growing = true);
+  !this._growing && (this._size -= 0.05);
+  (this._size <= 1) && (this._growing = true);
 
-  return {height: this._size, width: this._size};
+  return {transform: 'scale('+this._size+', '+this._size+')'};
 };
 

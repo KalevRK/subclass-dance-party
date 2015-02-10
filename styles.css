@@ -25,10 +25,24 @@ body, a:link, a:visited, a:active{
   width: 90%;
   margin: 0 auto;
 }
+
 .dancer{
-  height: 20px;
-  width: 20px;
-  background-color: red;
-  border-radius:50%;
   position:absolute;
+  height: 80px;
+  width: 80px;
+}
+
+.blinky {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.cat {
+  background-image: url(img/happycat.png);
+}
+
+.grumpyCat {
+  background-image: url(img/grumpycat_2.png);
 }
