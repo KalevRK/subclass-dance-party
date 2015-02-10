@@ -33,7 +33,7 @@
 };*/
 
 
-var Dancer = function(top, left, timeBetweenSteps) {
+var Dancer = function(timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this._timeBetweenSteps = timeBetweenSteps;
 
