@@ -44,8 +44,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
 };
 
 Dancer.prototype.step = function() {
-  var context = this;
-  setTimeout(function(){context.step();}, this._timeBetweenSteps);
+  setTimeout(this.step.bind(this),this._timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {
