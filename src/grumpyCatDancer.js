@@ -39,7 +39,7 @@ GrumpyCatDancer.prototype.lineUp = function() {
   this._isChasing = false;
   this._top = 200 + this._id * 100;
   this._left = 800;
-  this.setPosition(this._top, this._left);
+  this.$node.animate({top: this._top, left: this._left}, 500);
 };
 
 GrumpyCatDancer.prototype.surround = function() {

@@ -18,5 +18,5 @@ BlinkyDancer.prototype.blinkyCount = 0;
 BlinkyDancer.prototype.lineUp = function() {
   this._top = 100;
   this._left = 100 + this._id * 50;
-  this.setPosition(this._top, this._left);
+  this.$node.animate({top: this._top, left: this._left}, 500);
 };

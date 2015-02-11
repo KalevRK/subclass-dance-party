@@ -36,7 +36,7 @@ CatDancer.prototype.lineUp = function() {
   this._radius = 1;
   this._top = 200 + this._id * 100;
   this._left = 100;
-  this.setPosition(this._top, this._left);
+  this.$node.animate({top: this._top, left: this._left}, 500);
 };
 
 CatDancer.prototype.flee = function() {
