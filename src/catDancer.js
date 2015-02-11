@@ -5,6 +5,7 @@ var CatDancer = function(top, left){
   this.$node.addClass('cat');
   this._id = CatDancer.prototype.catCount++;
   this._isChasing = true;
+  this._hasFled = false;
 };
 
 CatDancer.prototype = Object.create(Dancer.prototype);
@@ -19,17 +20,26 @@ CatDancer.prototype.step = function() {
     this._top += this._radius * Math.sin(this._theta);
     this.setPosition(this._top, this._left);
   }
+
+  if (!(this instanceof GrumpyCatDancer) && GrumpyCatDancer.prototype.grumpyCount > 5) {
+    if (!this._hasFled) {
+      this.flee();
+      this._hasFled = true;
+      this._radius = 2;
+    }
+  }
 };
 
 CatDancer.prototype.catCount = 0;
 
 CatDancer.prototype.lineUp = function() {
-  console.log("I'm a cat dancer");
-};
-
-CatDancer.prototype.lineUp = function() {
   this._radius = 1;
-  this._top = 100 + this._id * 100;
+  this._top = 200 + this._id * 100;
   this._left = 100;
   this.setPosition(this._top, this._left);
+};
+
+CatDancer.prototype.flee = function() {
+  this._top = 500 + Math.random() * 100;
+  this._left = 500 + Math.random() * 100;
 };
