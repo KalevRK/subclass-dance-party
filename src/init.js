@@ -37,5 +37,6 @@ $(document).ready(function(){
       dancers[i].lineUp();
     }
   });
+
 });
 
