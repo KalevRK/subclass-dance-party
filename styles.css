@@ -50,6 +50,11 @@ body, a:link, a:visited, a:active{
 
 .cat {
   background-image: url(img/happycat.png);
+  transition: transform 0.5s linear;
+}
+
+.cat:hover {
+  transform: rotateX(90deg);
 }
 
 .grumpyCat {
